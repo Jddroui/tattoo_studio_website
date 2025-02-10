@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Some' Tattoo Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joelle Drouillard">
+    <meta name="description" content="Tattoo Studio Webpage">
+    <meta name="keywords" content="Tattoos, Art, Tattoo">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: start;
+            padding: 10px;
+            width: 100%;
+            min-height: 100px;
+            max-height: auto;
+            background-color: rgb(0, 0, 0);
+            color: #D1D6D0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        nav {
+            text-decoration: none;
+            font-size: 35px;
+            display: flex;
+            margin-left: 625px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #D1D6D0;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h3 {
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(9, 9, 9, 0.858);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #D1D6D0;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .dropdown a:hover {
+            background-color: rgba(33, 33, 33, 0.692);
+        }
+        .dropdown-trigger {
+            position: relative;
+        }
+        .dropdown-trigger:hover .dropdown {
+            display: block;
+        }
+        body {
+            background-image: url(globalStudioImages/tattooStudioBG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #D1D6D0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        form {
+            width: 500px;
+            padding: 20px;
+            font-size: 25px;
+            text-align: left;
+        }
+        label, input, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type=text], textarea {
+            width: 100%;
+            padding: 12px;
+        }
+        .error {
+            background-color: #ffcccc;
+        }
+        .submitButton {
+            background-color: #D1D6D0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+            text-align: center;
+            font-size: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            padding: 25px;
+            background-color: #2b1e1e;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .contactStyling {
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 25px;
+            text-align: left;
+            width: 350px;
+            background-color: #2b1e1ec5;
+        }
+    </style>
+</head>
+
+    <header>
+        <div>
+            <a href="index.html"><img src="globalStudioImages/tattooStudioLogo.png" width="120px" height="120px"></a>
+        </div>
+        <div class="text">
+            <h1>Someone's Tattoo Studio</h1>
+            <h3>Some Town, Some State</h3>
+        </div>
+        <nav>
+            <a href="highlightsPage.html">Highlights</a>
+            <div class="dropdown-trigger">
+                <a href="artistsPage.html">Artists</a>
+                <div class="dropdown">
+                    <a href="artistsPage.html#artist1">Artist 1</a>
+                    <a href="artistsPage.html#artist2">Artist 2</a>
+                    <a href="artistsPage.html#artist3">Artist 3</a>
+                </div>
+            </div>
+            <a href="contactPage.html">Contact Us</a>
+            <a href="FAQPage.html">FAQ</a>
+        </nav>
+    </header>
+<body>
+    <br>
+    <div class="contactStyling">
+        Studio Phone Number:<br>
+        <a href="tel:+19999999999">+1 999-999-9999</a><br>
+        Studio Email:<br>
+        <a href="mailto:someone@example.com">Studio@example.com</a><br>
+    </div>
+    <div class="container">
+        <div class="popup" id="reviewPopup">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <p>
+                Hey! If you love our shop, be sure to leave a review!
+                <br>
+                Questions?<br>
+                Check out our <a href="FAQPage.html" target="_blank">FAQ!</a>
+            </p>
+        </div>
+        <form onsubmit="validateForm(event)">
+            <label for="Name">Full Name*</label>
+            <input type="text" id="Name" name="name" required>
+            
+            <label for="Email">Email Address*</label>
+            <input type="text" id="Email" name="Email" required>
+
+            <label for="Artist">Preferred Artist</label>
+            <input type="text" id="Artist" name="Artist">
+            
+            <label for="Details">Details (What, when, price range, etc.)*</label>
+            <textarea id="Details" name="Details" required></textarea>
+            
+            <button class="submitButton" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateEmail() {
+            const emailField = document.getElementById("Email");
+            const emailValue = emailField.value;
+            const validEmailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!validEmailPattern.test(emailValue)) {
+                emailField.classList.add("error");
+                return false;
+            } else {
+                emailField.classList.remove("error");
+                return true;
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+            const isEmailValid = validateEmail();
+
+            if (isEmailValid) {
+                alert("Form submitted successfully! Someone will reach out to you ASAP!");
+            } else {
+                alert("Please complete this form!");
+            }
+        }
+
+        function showPopup() {
+            document.getElementById('reviewPopup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('reviewPopup').style.display = 'none';
+        }
+
+        setTimeout(showPopup, 5000);
+    </script>
+</body>
+</html>

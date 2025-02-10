@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Some' Tattoo Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joelle Drouillard">
+    <meta name="description" content="Tattoo Studio Webpage">
+    <meta name="keywords" content="Tattoos, Art, Tattoo">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: start;
+            padding: 10px;
+            width: 100%;
+            min-height: 100px;
+            max-height: auto;
+            background-color: rgb(0, 0, 0);
+            color: #D1D6D0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        nav {
+            text-decoration: none;
+            font-size: 35px;
+            display: flex;
+            margin-left: 625px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #D1D6D0;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h3 {
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(9, 9, 9, 0.858);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #D1D6D0;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .dropdown a:hover {
+            background-color: rgba(33, 33, 33, 0.692);
+        }
+        .dropdown-trigger {
+            position: relative;
+        }
+        .dropdown-trigger:hover .dropdown {
+            display: block;
+        }
+        body {
+            background-image: url(globalStudioImages/tattooStudioBG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #D1D6D0;
+            
+        }
+        .bodyText {
+            text-align: center;
+            font-size: 50px;
+            flex-wrap: wrap;
+        }
+        .bodyMargins {
+            margin: 50px;
+            padding: 30px;
+        }
+        .center {
+            text-align: center;
+        }
+        .flexBox {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+    </style>
+</head>
+<!--Repeated Header for Each Page-->
+<header>
+    <div>
+        <a href=index.html><img src="globalStudioImages/tattooStudioLogo.png" width="120px" height="120px"></a>
+    </div>
+    <div class="text">
+        <h1>Someone's Tattoo Studio</h1>
+        <h3>Some Town, Some State</h3>
+    </div>
+    <nav>
+        <a href="highlightsPage.html">Highlights</a>
+        <div class="dropdown-trigger">
+            <a href="artistsPage.html">Artists</a>
+            <div class="dropdown">
+                <a href="artistsPage.html#artist1">Artist 1</a>
+                <a href="artistsPage.html#artist2">Artist 2</a>
+                <a href="artistsPage.html#artist3">Artist 3</a>
+            </div>
+        </div>
+        <a href="contactPage.html">Contact Us</a>
+        <a href="FAQPage.html">FAQ</a>
+    </nav>
+</header>
+<body>
+    <div class="flexBox bodyMargins">
+        <section class="bodyText">
+            <hr>
+            <br>
+            Artist #1
+            <br><br>
+            This tattoo was done in
+            [thisMonth] of 20XX.
+            <br><br>
+            Time elapsed: x hours
+            <br><br><br>
+            <a href="artistsPage.html#artist1">Click here for this artist's page!</a>
+        </section>
+        <section>
+            <img src="tattooStudioImages/HighlightsPageImage/tattooExample1.jpg" height="750px" width="750px">
+        </section>
+    </div>
+    <div class="flexBox bodyMargins">
+        <section>
+            <img src="tattooStudioImages/HighlightsPageImage/tattooExample2.jpg" height="750px" width="750px">
+        </section>
+        <section class="bodyText">
+            <hr>
+            <br>
+            Artist #1
+            <br><br>
+            This tattoo was done in
+            [thisMonth] of 20XX.
+            <br><br>
+            Time elapsed: x hours
+            <br><br><br>
+            <a href="artistsPage.html#artist2">Click here for this artist's page!</a>
+        </section>
+    </div>
+    <div class="flexBox bodyMargins">
+        <section class="bodyText">
+            <hr>
+            <br>
+            Artist #1
+            <br><br>
+            This tattoo was done in
+            [thisMonth] of 20XX.
+            <br><br>
+            Time elapsed: x hours
+            <br><br><br>
+            <a href="artistsPage.html#artist3">Click here for this artist's page!</a>
+        </section>
+        <section>
+            <img src="tattooStudioImages/HighlightsPageImage/tattooExample3.jpg" height="750px" width="750px">
+        </section>
+    </div>
+
+</body>
+</html>

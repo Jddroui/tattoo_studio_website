@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Some' Tattoo Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joelle Drouillard">
+    <meta name="description" content="Tattoo Studio Webpage">
+    <meta name="keywords" content="Tattoos, Art, Tattoo">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: start;
+            padding: 10px;
+            width: 100%;
+            min-height: 100px;
+            max-height: auto;
+            background-color: rgb(0, 0, 0);
+            color: #D1D6D0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        nav {
+            text-decoration: none;
+            font-size: 35px;
+            display: flex;
+            margin-left: 625px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #D1D6D0;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h3 {
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(9, 9, 9, 0.858);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #D1D6D0;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .dropdown a:hover {
+            background-color: rgba(33, 33, 33, 0.692);
+        }
+        .dropdown-trigger {
+            position: relative;
+        }
+        .dropdown-trigger:hover .dropdown {
+            display: block;
+        }
+        body {
+            background-image: url(globalStudioImages/tattooStudioBG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #D1D6D0;
+        }
+        .center {
+            text-align: center;
+            padding-top: 30px;
+        }
+        .flexBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 20px;
+            padding: 30px;
+            width: 500px;
+            margin: 50px;
+            text-align: left;
+        }
+        .background {
+            background-color: #d1d6d065;
+            background-image: linear-gradient(to bottom, #272727, black);
+            border: solid #d1d6d050;
+            border-width: 1px;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<!-- Repeated Header for Each Page -->
+<header>
+    <div>
+        <a href="index.html"><img src="globalStudioImages/tattooStudioLogo.png" width="120px" height="120px"></a>
+    </div>
+    <div class="text">
+        <h1>Someone's Tattoo Studio</h1>
+        <h3>Some Town, Some State</h3>
+    </div>
+    <nav>
+        <a href="highlightsPage.html">Highlights</a>
+        <div class="dropdown-trigger">
+            <a href="artistsPage.html">Artists</a>
+            <div class="dropdown">
+                <a href="artistsPage.html#artist1">Artist 1</a>
+                <a href="artistsPage.html#artist2">Artist 2</a>
+                <a href="artistsPage.html#artist3">Artist 3</a>
+            </div>
+        </div>
+        <a href="contactPage.html">Contact Us</a>
+        <a href="FAQPage.html">FAQ</a>
+    </nav>
+</header>
+<!-- Page Content -->
+<body>
+    <div class="center">
+        <h1>Video for day 0 tattoo care!</h1>
+    </div>
+    <div class="center">
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/dnp8hdiJZKk?si=8aEdFFxr3Io2h2qM"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <div class="center">
+        <h1>Frequently Asked Questions!</h1>
+    </div>
+    <div class="flexBox">
+        <p class="background">
+            Q: My tattoo is itchy! Should I be worried?<br><br>
+            A: No :D it is normal for your tattoo to be itchy
+            later in the healing process. However, if it gets
+            enflamed or begins oozing, get to the doctor ASAP!
+            Those are signs of infection!
+        </p>
+        <p class="background">
+            Q: Is getting a tattoo expensive?<br><br>
+            A: It depends on the artist and how much time it will
+            take to complete your tattoo. Our artists average around
+            $150 an hour, with a minimum of $100. We also ask for a 50%
+            deposit. 
+        </p>
+    </div>
+    <div class="flexBox">
+        <p class="background">
+            Q: Do you do walk-ins?<br><br>
+            A: Typically, no. Though we have on occasion. Keep
+            up with our <a href="https://www.instagram.com/">Instagram</a>
+            to keep an eye out! Otherwise, <a href="contactPage.html">contact us</a>
+            for an appointment!
+        </p>
+        <p class="background">
+            Q: I can't make my appointment! What should I do?<br><br>
+            A: Call us ASAP! Explain your situation to the receptionist
+            and hopefully your artist can reschedule you ASAP! Our
+            artists are understanding of unavoidable situations.
+        </p>
+    </div>
+    <br>
+    <div class="flexBox">
+        <h1>Don't see your question here? <a href="contactPage.html">Contact Us!</a></h1>
+    </div>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Some' Tattoo Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joelle Drouillard">
+    <meta name="description" content="Tattoo Studio Webpage">
+    <meta name="keywords" content="Tattoos, Art, Tattoo">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: start;
+            padding: 10px;
+            width: 100%;
+            min-height: 100px;
+            max-height: auto;
+            background-color: rgb(0, 0, 0);
+            color: #D1D6D0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        nav {
+            text-decoration: none;
+            font-size: 35px;
+            display: flex;
+            margin-left: 625px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #D1D6D0;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1, h3 {
+            flex-wrap: wrap;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(9, 9, 9, 0.858);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #D1D6D0;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .dropdown a:hover {
+            background-color: rgba(33, 33, 33, 0.692);
+        }
+        .dropdown-trigger {
+            position: relative;
+        }
+        .dropdown-trigger:hover .dropdown {
+            display: block;
+        }
+        body {
+            background-image: url(globalStudioImages/tattooStudioBG.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #D1D6D0;
+            
+        }
+        .bodyText {
+            text-align: left;
+            font-size: 50px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .bodyMargins {
+            margin: 50px;
+        }
+        .center {
+            text-align: center;
+        }
+        .flexBox {
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        footer {
+            background: black;
+            text-align: center;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+        table {
+            border: 1px #D1D6D0 solid;
+            margin: 0 auto;
+            text-align: center;
+            border-collapse: collapse;
+
+        }
+        td {
+            padding: 25px;
+            border: 1px #D1D6D0 solid;
+        }
+        tr {
+            border: 1px #D1D6D0 solid;
+        }
+
+    </style>
+</head>
+<!--Repeated Header for Each Page-->
+<header>
+    <div>
+        <a href=index.html><img src="globalStudioImages/tattooStudioLogo.png" width="120px" height="120px"></a>
+    </div>
+    <div class="text">
+        <h1>Someone's Tattoo Studio</h1>
+        <h3>Some Town, Some State</h3>
+    </div>
+    <nav>
+        <a href="highlightsPage.html">Highlights</a>
+        <div class="dropdown-trigger">
+            <a href="artistsPage.html">Artists</a>
+            <div class="dropdown">
+                <a href="artistsPage.html#artist1">Artist 1</a>
+                <a href="artistsPage.html#artist2">Artist 2</a>
+                <a href="artistsPage.html#artist3">Artist 3</a>
+            </div>
+        </div>
+        <a href="contactPage.html">Contact Us</a>
+        <a href="FAQPage.html">FAQ</a>
+    </nav>
+</header>
+<body>
+    <div class="flexBox bodyMargins">
+        <section class="bodyText">
+            <br><br>
+            Welcome to [This] Tattoo Studio!<br><br>
+            Here, we have artists that specialize in
+            [insert art styles] and we strive to
+            have an accepting and creative environment.
+        </section>
+        <section>
+            <img src="tattooStudioImages/IndexPageImages/tattooStudioImage.png" height="750px" width="750px">
+        </section>
+    </div>
+    <br><br>
+    <div>
+        <table>
+            <thead>
+              <tr>
+                <th>Artist</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Artist 1</td>
+                <td>10am - 6pm</td>
+                <td>Off</td>
+                <td>10am - 6pm</td>
+                <td>10am - 6pm</td>
+                <td>10am - 8pm</td>
+                <td>10am - 4pm</td>
+                <td>Shop Closed</td>
+              </tr>
+              <tr>
+                <td>Artist 2</td>
+                <td>Off</td>
+                <td>10am - 6pm</td>
+                <td>10am - 6pm</td>
+                <td>Off</td>
+                <td>10am - 8pm</td>
+                <td>10am - 4pm</td>
+                <td>Shop Closed</td>
+              </tr>
+              <tr>
+                <td>Artist 3</td>
+                <td>Off</td>
+                <td>10am - 6pm</td>
+                <td>10am - 6pm</td>
+                <td>Off</td>
+                <td>10am - 8pm</td>
+                <td>10am - 4pm</td>
+                <td>Shop Closed</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <br><br><br>
+    <div class="center">
+        <br><br>
+        <iframe style="filter:invert(90%)" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18162.578776326278!2d-74.6359280529507!3d40.574346827659156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3954a18cb7a93%3A0xa7751aef3c12ee62!2sArtisanal%20Tattoo!5e0!3m2!1sen!2sus!4v1721260583701!5m2!1sen!2sus" 
+        width="1000" height="450" style="border: 20px solid whitesmoke;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br><br><br>
+    </div>
+    <br>
+</body>
+<footer>
+    <br>
+    Privacy Policy<br>
+    +1 999-999-9999<br>
+    <a href="mailto:droui013@umn.edu">droui013@umn.edu</a><br>
+    @ 2024 Droi US, INC. All rights reserved.<br>
+</footer>
+</html>
